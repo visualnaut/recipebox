@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+* { margin:0; padding:0}
+a { text-decoration:none; color:#ff6600}
+body { font-family:"Segoe UI"}
+/* topbar */ 
+
+.topbar { width:100%; background:#ff6600; height:40px; position:relative}
+.topbar ul { list-style:none; height:40px; font-size:17pt; color:#fff; font-family:"Segoe UI Light"; margin-left:20px; min-width:500px;; margin-right:20px; line-height:35px; position:relative}
+.topbar ul li { float:right}
+.topbar ul li:first-child { float:left; color:#fff; padding:1px; padding-right:8px}
+.topbar ul li:first-child span { position:relative; top:4px; left:5px}
+.topbar ul li:last-child { width:130px; padding:0; height:40px; padding-left:5px; line-height:30px}
+.topbar ul li:last-child:hover { background:#c14d00;}
+.topbar ul li:hover .createpane { visibility:visible;}
+.topbar ul li a { font-size:16pt; text-decoration:none; color:#fff; margin-left:5px }
+.topbar ul li:last-child a {font-size:10pt;}
+.thumb { width:30px; height:30px; margin-right:10px; margin-top:5px; background-size:30px !important; background-position:center !important; float:right}
+.topbar ul li:hover .thoption { visibility:visible; opacity:1 }
+.thoption { width:200px; height:auto; background:#fff; border:thin solid #ccc; position:absolute; right:-20px; top:40px; opacity:0; visibility:hidden; -webkit-transition:all 0.2s;}
+.thoption a { color:#ff6600 !important; font-size:12pt !important; border-bottom:thin solid #f5f5f5; display:block; position:relative; right:5px; text-indent:5px; -webkit-transition:all 0.1s}
+.thoption a:hover { text-indent:10px; background:#f4f4f4}
+/* topbar */ 
+
+/* user view */ 
+.scroll { overflow-y:scroll; overflow-x:hidden; width:370px;height:500px; border-bottom:thin solid #eee}
+.scroll label, .scroll span { font-size:9pt; color:#333}
+.scroll span { color:#888}
+.fullwrap { width:960px; height:auto; border:thin solid #fff}
+.mainwrap { width:280px; height:auto; border:thin solid #fff; float:left}
+.hwrap, .sidebar{ width:245px; height:auto; border:thin solid #fff; padding-left:30px; float:left; word-wrap:break-word}
+.hwrap { padding-top:50px}
+
+.sidebar h1, .hwrap h1 {font-family:"Segoe UI Light"; font-weight:normal; color:#333; font-size:20pt; margin-bottom:5px; margin-top:20px}
+.propic { width:200px; height:200px; border:thin solid #eee; background-size:cover !important; background-position:center !important; position:relative; overflow:hidden}
+.propic:hover span { bottom:0}
+.propic span a { text-decoration:none; color:#333}
+.propic span a:hover { text-decoration:underline}
+.propic span { background:rgba(255,255,255,0.6); position:absolute; bottom:-23px; width:100%; height:20px; padding-left:10px; padding-bottom:3px; -webkit-transition:all 0.2s}
+
+.profileinfo span { font-weight:thick;}
+.profileinfo h1 { color:#888; margin:0; font-size:18pt}
+.profileinfo li { list-style:none; font-family:"Segoe UI"; font-size:10pt; margin-bottom:20px}
+.profileinfo a:hover { text-decoration:underline;}
+
+.favrecbox { width:350px; height:95px; margin-top:5px; position:relative; background:#f8f8f8; border:thin solid #ddd}
+.favrecimg { width:80px; height:80px; background-size:cover !important; background-position:center !important; margin-left:8px; margin-top:8px;  float:left; margin-right:10px; position:relative; z-index:999; border:1px solid #ddd}
+.favrecbox span a {color:#ff6600}
+.favrecbox span a:hover {text-decoration:underline;}
+.favrecbox h1 { font-size:13pt; margin-top:0px; position:relative; color:#ff6600; background:#eee; border-bottom:thin solid #ddd; padding:5px}
+.favrecbox h1:hover {text-decoration:underline}
+.removebtn { width:10px; height:20px; position:absolute; top:0; right:0; font-weight:bold; padding: 0 5px 0 5px; font-family:"Segoe UI"}
+.favrecbox a { color:#ff6600}
+.favrecbox a:hover {color:#000}
+
+/* user view */ 
+
+

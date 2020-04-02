@@ -1,0 +1,211 @@
+@charset "utf-8";
+/* CSS Document */
+
+* { margin:0; padding:0}
+*:focus {
+    outline: none;
+}
+a { text-decoration:none; color:#ff6600}
+body { font-family:"Segoe UI";}
+
+.topbar { width:100%; background:#ff6600; height:40px; position:relative; z-index:999; min-width:750px;}
+.topbar ul { list-style:none; height:40px; font-size:17pt; color:#fff; font-family:"Segoe UI Light"; margin-left:20px; line-height:35px;}
+.topbar ul li { float:left}
+.topbar ul .hierarc { padding:0 10px 0px 3px; position:relative; margin-right:10px}
+.topbar ul .hierarc:after { content:'▼'; font-size:8pt; position:relative; left:5px; bottom:2px}
+.topbar ul .hierarc:hover .createpane { opacity:1; visibility:visible; height:auto;}
+.hierarc a {cursor:default}
+
+.topbar ul li:first-child { color:#fff; padding:1px; padding-right:8px; width:165px}
+.topbar ul li:first-child span { position:relative; top:4px; left:5px}
+.topbar ul li:last-child { width:130px; padding:0; height:40px; padding-left:0px; line-height:30px; float:right; position:relative}
+.topbar ul li:last-child:hover, .topbar ul .hierarc:hover { background:#c14d00;}
+.topbar ul li:last-child:hover .thoption {opacity:1; visibility:visible}
+.thoption { width:200px; height:auto; background:#fff; border:thin solid #ccc; position:absolute; right:0; top:40px; opacity:0; visibility:hidden; -webkit-transition:all 0.2s}
+.thoption a { color:#ff6600 !important; font-size:12pt !important; border-bottom:thin solid #f5f5f5; display:block; position:relative; right:5px; text-indent:5px; -webkit-transition:all 0.1s}
+.thoption a:hover { text-indent:10px; background:#f4f4f4}
+
+.topbar ul li a { font-size:16pt; text-decoration:none; color:#fff; margin-left:5px }
+.topbar ul li:last-child a {font-size:10pt;}
+.thumb { width:30px; height:30px; margin-right:10px; margin-top:5px; background-size:30px !important; background-position:center !important; float:right}
+
+.left_col { width:195px; display:block; background:#F0F0F0; position:absolute; top:0px; left:0; height:100%; overflow-x:hidden; overflow-y:auto;}
+.left_col table { width:100%; height:auto; font-family:"Segoe UI Light"; font-size:18pt; border-spacing:1; margin-top:40px}
+.left_col table a { display:block; padding-left:20px; color:#666; height:35px; line-height:30px; padding-top:5px; -webkit-transition:all 0.2s; border-bottom:1px solid #f5f5f5}
+.left_col table a:hover { background:#ccc; text-indent:20px}
+.left_col table input { width:140px; padding:6px; margin-left:10px; margin-top:10px; border:thin solid #ccc; margin-bottom:10px}
+.left_col table input:hover, .left_col table input:focus { border:thin solid #aaa}
+.createpane { width:210px; border:thin solid #ff6600; background:#fff; position:absolute; left:0; top:39px; visibility:hidden; opacity:0; -webkit-transition:all 0.3s; overflow:hidden; height:0px}
+.createpane table { width:216px; border-spacing:0; position:relative; top:0; left:-5px}
+.createpane table a {color:#ff6600 !important; display:block; padding-left:10px; margin-bottom:2px}
+.createpane table a:hover { background:#F0F0F0}
+
+.ordering { position:relative; bottom:1px}
+.ordering select { width:120px; padding:3px;}
+
+.listbtn, .thumbbtn { background:url(../icons/list.png); background-repeat:no-repeat; width:52px; background-position:center; border:thin solid #ccc; height:20px; margin-top:6px; padding:3px; border-radius:2px}
+.thumbbtn { background:url(../icons/thumb.png); background-repeat:no-repeat;background-position:center;}
+
+.main_col { background:#fff; position:absolute; left:195px; top:40px; bottom:0; right:0; overflow-x:auto; overflow-y:auto; z-index:-999; padding-top:5px;}
+.main_col h1 {font-family:"Segoe UI Light"; font-weight:normal; color:#aaa; text-indent:20px }
+
+.bar { font-family:"Segoe UI Light"; font-size:18pt; color:#777; position:relative; right:0; height:40px; background:#fff; border-bottom:thin solid #ccc; min-width:550px;}
+.bar ul {list-style:none; position:relative;}
+.bar ul li{float:right; margin-right:10px}
+.bar ul a{float:right;}
+.bar ul li:first-child {float:left; margin-left:10px}
+
+.tablerec { width:100%; height:30px; background:#fff; min-width:800px; border-spacing:0;}
+.tablerec tr th {color:#333; text-align:left; padding-bottom:5px}
+.tablerec td:first-child {width:25px; padding-left:20px}
+.tablerec td:nth-child(3) {max-width:200px}
+.tablerec td:nth-child(4), .main_col .tablerec td:nth-child(5),  .main_col .tablerec td:nth-child(6) {width:150px}
+.tablerec tr:hover , .main_col .tablerec tr:nth-child(2n):hover{ background:#e6e6e6}
+.tablerec tr, .tablekat tr { border-bottom:thin solid #fff;}
+.tablerec tr:nth-child(2n) { background:#f7f7f7}
+.tablerec thead tr:first-child:hover { background:#fff;}
+.tablerec tr td {height:25px}
+
+.containthumb { width:100%; overflow:auto}
+.recthumb { width:180px; height:180px; border:thin solid #ccc; float:left; margin:5px; position:relative; background-position:left !important; background-size:cover !important; overflow:hidden;}
+.recthumb .info a:hover {text-decoration:underline}
+.recthumb .info { width:180px; height:180px; background:rgba(255,255,255,0.6); position:absolute; bottom:-185px; -webkit-transition:all 0.3s ease-out}
+.recthumb .info h3 { font-weight:normal; background:rgba(255,255,255,0.8); font-family:"Segoe UI"; padding:5px}
+.recthumb .info li { font-size:10pt; list-style:none; margin-top:5px; margin-left:5px}
+.recthumb:hover .info { bottom:0}
+
+.tableadd{ padding:5px;padding-bottom:30px}
+.tableadd a:hover { text-decoration:underline}
+.tableadd tr td { padding-left:30px}
+.tableadd hr { margin-top:5px}
+.tableadd input, .tableadd textarea, .tableadd select, .sideform input, .sideform textarea { border:2px solid #999; padding:5px; width:280px; font-family:"Segoe UI"}
+.tableadd textarea, .sideform textarea { height:100px; resize:none }
+.sideform textarea {height:80px; resize:vertical}
+.tableadd select { width:294px}
+.tableadd input[type=file], .sideform  input[type=file] { padding:0; border:none;}
+.sideform input[type=number] { width:90px}
+.sideform input[type=submit] { width:140px}
+
+.tableadd .wraptooltip { position:relative; height:auto}
+.tableadd .wraptooltip:hover .tooltip { visibility:visible; opacity:1; right:-150px;}
+.wraptooltip .tooltip { position:absolute; width:120px; height:30px; background:#ff6600; right:-120px; top:0; visibility:hidden; line-height:30px; padding-left:20px; color:#fff; opacity:0; -webkit-transition:all 0.2s; font-size:9pt}
+.wraptooltip .tooltip input { border:0; width:20px; background:#ff6600; color:#fff;font-size:8pt; position:relative; padding:0px}
+.wraptooltip .tooltip:before { content:url(../icons/left-arrow-org.png); position:absolute; left:-5px; top:10px}
+
+.wrapform { width:550px; height:auto; overflow:auto; background:#fff; position:relative; padding-bottom:15px; border-bottom:thin solid #ddd}
+.wrapform a { position:absolute; bottom:7px; left:50%}
+.wrapform a:hover { text-decoration:underline}
+.sideform { width:100px; height:auto; background:#fff; float:left; padding-left:40px; margin-right:3px; padding-bottom:10px}
+.sideform li { list-style:none; margin-top:5px; line-height:30px}
+.sideform input[type=number] { width:90px}
+.sideform input[type=submit] { width:140px; margin-top:20px}
+.abutton { margin-bottom:30px; height:50px; background:#fff}
+.res { position:relative; bottom:10px; right:30px}
+
+#addButonL, #addButonB { padding:5px; background:#ff6600; color:#fff; position:relative; top:5px}
+
+@-webkit-keyframes fadeside {
+	from {opacity:0; left:-20px}
+	to {opacity:1; left:0}
+	}
+	
+@-webkit-keyframes fade {
+	from {opacity:0;}
+	to {opacity:1;}
+	}
+	
+.fading{ -webkit-animation:fadeside; -webkit-animation-duration:0.5s; position:relative}
+
+.ui-autocomplete { background:#fff; border:2px solid #999; width:100px; border-top:none; position:relative;-webkit-animation:fade; -webkit-animation-duration:0.2s; height:100px; overflow-y:scroll}
+.ui-menu-item { background:#fff; list-style:none; padding:3px; border-bottom:thin solid #ddd; -webkit-transition:all 0.2s}
+.ui-menu-item:hover { background:#eee}
+.ui-menu-item a { display:block;}
+.ui-menu-item a:hover { cursor:default !important;}
+
+.detailres {border:thin solid #fff; padding:10px; overflow:auto; width:900px}
+.detailres .img {width:410px; height:210px; border:thin solid #ccc; margin-top:5px; float:left; margin-right:10px; background-position:left center !important}
+.detailres ul { list-style:none;}
+.detailres h3 { font-weight:normal; font-family:"Segoe UI Light"; font-size:19pt; color:#666}
+.detailres ul li { margin-right:5px; margin-bottom:5px; color:#333; border-bottom:thin dashed #f5f5f5}
+.detailres ul li.note { background:#f5f5f5; padding:2px; text-align:center; color:#333; margin-top:6px; color:#ff6600}
+.detailres .ket { width:200px; height:150px; border:thin solid #fff; float:left; margin-right:5px}
+.detailres ul span { background:#ff6600; padding:1px 10px; border-radius:10px; float:right; color:#fff}
+.detailres .title { width:auto; border:thin solid #fff; overflow:auto}
+.detailres .title h1 { display:inline; float:left;}
+.edit, .remove { width:30px; height:30px; float:right; margin-top:15px; margin-right:5px}
+.remove_sm, .promote { width:18px; height:18px;}
+.remove_sm { background:url(../icons/delete_sm.png)}
+.promote { background:url(../icons/promote.png)}
+.promote:hover { background:url(../icons/promote_hover.png)}
+.remove_sm:hover { background:url(../icons/delete_sm_hover.png)}
+.edit { background:url(../icons/edit.png); }
+.edit:hover { background:url(../icons/edit_hover.png)}
+.remove {background:url(../icons/delete.png); }
+.remove:hover { background:url(../icons/delete_hover.png)}
+.detailres .detail {clear:both ; margin-top:5px}
+.detailres .detail h2 { font-weight:normal; font-family:"Segoe UI Light"; font-size:22pt; color:#666; border-bottom:thin solid #ccc}
+.detailres .detail ul { margin-left:15px; list-style:square; margin-top:5px}
+.langkah { list-style:decimal !important}
+.colad { -webkit-column-count:2}
+.colad li:before { color:#ff6600; content:'√'; margin-right:3px}
+.wrapfulstat { width:100%; min-width:850px; border:thin solid #fff; overflow:auto; margin-bottom:20px; border-left:none; border-right:none}
+.wrapfulstat h1 { border-bottom:thin solid #f4f4f4; font-size:21pt; color:#999	}
+.wrapstat { width:380px; height:auto; border:thin solid #fff; float:left; margin-left:10px; border-right:thin solid #f5f5f5; padding-right:10px}
+a.link { float:right}
+a.link:hover { text-decoration:underline}
+.wrapstat:last-child { border:none}
+.wrapstat h3 { display:inline}
+.wrapstat a:hover {text-decoration:underline}
+.constat{ width:100%; height:auto; background:#fff; border-bottom:thin dashed #f4f4f4; overflow:auto}
+.constat p { font-size:10pt;color: #333;
+font-style: italic;}
+.constat h3 {font-weight:normal; color:#ff6600}
+.constat span { font-size:10pt; color:#999; font-style:italic; float:right}
+.constat .img { width:100px; height:100px; border:thin solid #f5f5f5; margin:5px; float:left; background-size:cover !important}
+.tablestat span { background:#ff6600; border-radius:10px; padding:0px 15px 0px 15px; color:#fff; border-spacing:10px; min-width:6px; max-width:230px; display:block}
+.tablestat th { font-weight:normal; font-size:18pt; color:#ff6600; border-bottom:thin solid #f0f0f0; font-family:"Segoe UI Light"; text-align:left}
+.tablerev, .tabuser { width:100%; border-spacing:0px}
+.tablerev th, .tabuser th { font-weight:normal; color:#ff6600; border-bottom:thin solid #e0e0e0; font-size:15pt; padding-bottom:4px}
+.tablerev tr td { padding:3px}
+.tablerev tr td a:hover { text-decoration:underline}
+.tablerev tr td, .tabuser tr td { border-bottom:thin dashed #e0e0e0}
+.tabuser tr td { padding:2px}
+.tabuser a:hover, .tablerev a:hover { text-decoration:underline}
+.tabuser .imgth { width:50px; height:50px; border:thin solid #ddd; background-size:cover !important}
+
+#confirmDel, #addKbox , #addHbox{ position:absolute; display:none; width:300px; height:120px; background:#ff6600; z-index:9999; color:#fff; top:50%; left:50%; margin-left:-150px; margin-top:-60px; padding:25px; font-size:19pt;}
+#addKbox, #addHbox {display:none; font-size:16pt; width:300px ;margin-left:-150px; height:100px; margin-top:-50px; }
+#addKbox input, #addHbox input { width: 200px; padding:5px; border:thin solid #fff}
+#addKbox input[type=submit], #addHbox input[type=submit] { width:50px}
+
+
+@-webkit-keyframes confirmBoxS {
+	from {opacity:0; margin-left:-160px}
+	to {opacity:1; margin-left:-150px}
+	}
+	
+.animCB{ visibility:visible; -webkit-animation:confirmBoxS; -webkit-animation-duration:0.5s;}
+#confirmDel a, #addKbox a, #addHbox a { float:left; background:#fff; padding:5px 10px; margin-top:20px; font-size:13pt;margin-right:7px}
+#addKbox a, #addHbox a { position:relative; bottom:10px}
+
+.detailuser { width:200px; max-height:530px; height:auto; background:#fff; padding:10px; float:left; margin-left:10px }
+.detailuser .imgp { width:200px; height:200px; background-size:contain !important}
+
+.profileinfo span { font-weight:thick;}
+.detailuser hr { border:none; border-bottom:thin solid #ddd}
+.profileinfo h1 { color:#888; margin:0; font-size:18pt; text-indent:0}
+.profileinfo li { list-style:none; font-family:"Segoe UI"; font-size:10pt; margin-bottom:20px}
+.profileinfo a:hover { text-decoration:underline;}
+
+.scroll { overflow-y:scroll; overflow-x:hidden; width:370px;height:500px; border-bottom:thin solid #eee}
+.scroll label, .scroll span { font-size:9pt; color:#333}
+.scroll span { color:#888}
+.favrecbox { width:350px; height:95px; margin-top:5px; position:relative; background:#f8f8f8; border:thin solid #ddd}
+.favrecimg { width:80px; height:80px; background-size:cover !important; background-position:center !important; margin-left:8px; margin-top:8px;  float:left; margin-right:10px; position:relative; z-index:999; border:1px solid #ddd}
+.favrecbox span a {color:#ff6600}
+.favrecbox span a:hover {text-decoration:underline;}
+.favrecbox h1 { text-indent:0;font-size:13pt; margin-top:0px; position:relative; color:#ff6600; background:#eee; border-bottom:thin solid #ddd; padding:5px}
+.favrecbox h1:hover {text-decoration:underline}
+.removebtn { width:10px; height:20px; position:absolute; top:0; right:0; font-weight:bold; padding: 0 5px 0 5px; font-family:"Segoe UI"}
+.favrecbox a { color:#ff6600}
+.favrecbox a:hover {color:#000}
